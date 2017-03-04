@@ -1,0 +1,2 @@
+module BotActionsHelper
+end

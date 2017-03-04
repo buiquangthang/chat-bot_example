@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @laptop.name
+%p
+  %b Description:
+  = @laptop.description
+%p
+  %b Price:
+  = @laptop.price
+
+= link_to 'Edit', edit_laptop_path(@laptop)
+\|
+= link_to 'Back', laptops_path

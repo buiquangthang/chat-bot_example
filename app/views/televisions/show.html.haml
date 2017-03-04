@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @television.name
+%p
+  %b Description:
+  = @television.description
+%p
+  %b Price:
+  = @television.price
+
+= link_to 'Edit', edit_television_path(@television)
+\|
+= link_to 'Back', televisions_path

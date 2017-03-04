@@ -1,0 +1,25 @@
+%h1 Listing laptops
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Description
+      %th Price
+      %th
+      %th
+      %th
+
+  %tbody
+    - @laptops.each do |laptop|
+      %tr
+        %td= laptop.name
+        %td= laptop.description
+        %td= laptop.price
+        %td= link_to 'Show', laptop
+        %td= link_to 'Edit', edit_laptop_path(laptop)
+        %td= link_to 'Destroy', laptop, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Laptop', new_laptop_path
